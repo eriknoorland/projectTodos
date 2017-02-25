@@ -1,0 +1,91 @@
+.todo__item {
+  position: relative;
+  margin: 0 0 5px 0;
+  padding: 10px 25px 10px 10px;
+}
+
+.todo__list--open .todo__item {
+  background-color: #dfd67b;
+}
+
+.todo__list--progress .todo__item {
+  background-color: #81cfd1;
+}
+
+.todo__list--done .todo__item {
+  background-color: #80d087;
+}
+
+.todo__item__description {
+  margin: 0;
+}
+
+.todo__item__linkWrapper {
+  background: rgba(0, 0, 0, .1);
+}
+
+.todo__item__link {
+  position: relative;
+  display: inline-block;
+  margin: 20px 5px 0 0;
+  font-size: 11px;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.todo__item__link:before,
+.todo__item__link:after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  left: auto;
+  width: 8px;
+  height: 2px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+.todo__item__link--prev:before,
+.todo__item__link--prev:after {
+  right: auto;
+  left: 0px;
+}
+
+.todo__item__link:before {
+  top: -3px;
+  transform: rotate(45deg);
+}
+
+.todo__item__link:after {
+  top: 3px;
+  transform: rotate(-45deg);
+}
+
+.todo__item__link--prev:before {
+  transform: rotate(-45deg);
+}
+
+.todo__item__link--prev:after {
+  transform: rotate(45deg);
+}
+
+.todo__list--open .todo__item__link--prev,
+.todo__list--done .todo__item__link--next {
+  display: none;
+}
+
+.todo__item__priority {
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 15px;
+  font-weight: bold;
+  color: #da6667;
+  text-align: center;
+  background: rgba(0, 0, 0, .05);
+  border-radius: 50%;
+}

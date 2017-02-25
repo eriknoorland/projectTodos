@@ -1,0 +1,13 @@
+form {
+  padding: 20px;
+  background: #eee;
+}
+
+label {
+  display: inline-block;
+  width: 80px;
+}
+
+input[type=text] {
+  padding: 5px;
+}
